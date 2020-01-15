@@ -1,0 +1,283 @@
+*, *:after, *:before{
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+.page-container {
+  background: linear-gradient(253deg, #000000, #001741, #330085);
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-size: 300% 300%;
+  animation: bgAnimate 8s ease infinite;
+  overflow: hidden;
+}
+@keyframes bgAnimate {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 9999999999;
+}
+#new-year {
+  position: relative;
+  top: 50%;
+  width: 90%;
+  height: 90%;
+  margin: 0 auto 0 auto;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+#new-year svg {
+  width: 100%;
+  height: 100%;
+}
+.stroke-fill {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  stroke: #efefef;
+}
+.year-box {
+  margin-top: 100px;
+}
+.year-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 200px 100px 0px 0px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+@media (max-width: 767px) {
+  .year-box { 
+    display: none;
+  }
+}
+.year-box > span {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 175px;
+  font-weight: 700;
+  color: #0c9463;
+}
+
+span.go_19 {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  margin-right: -250px;
+  -webkit-animation: go_2019 5s ease-in-out 5s forwards;
+  animation: go_2019 5s ease-in-out 5s forwards;
+}
+span.come_20 {
+  position: absolute;
+  right: 0%;
+  margin-right: -255px;
+  -webkit-animation: come_2020 6s ease-in-out forwards;
+  animation: come_2020 6s ease-in-out forwards;
+}
+.balloon {
+  width: 100px;
+  height: 100px;
+  display: block;
+  background: #ce2e6c;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  margin-top: -165px;
+  right: 0%;
+  margin-right: -200px;
+  -webkit-animation: baloon_animation 10s ease-in-out forwards;
+  animation: baloon_animation 10s ease-in-out forwards;
+}
+
+.balloon:before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 10px 20px 10px;
+  border-color: transparent transparent #ce2e6c transparent;
+  position: absolute;
+  left: 50%;
+  margin-left: -10px;
+  bottom: -10px;
+}
+
+.balloon:after {
+  content: '';
+  width: 4px;
+  height: 100px;
+  display: block;
+  background: #1e90ff;
+  border-radius: 0px 0px 3px 3px;
+  position: absolute;
+  left: 50%;
+  margin-left: -2px;
+  bottom: -110px;
+}
+@keyframes come_2020 {
+  0% {
+    right: 0%;
+  }
+  66.6666% {
+    right: 50%;
+    margin-right: -450px;
+  }
+  90% {
+    right: 50%;
+    margin-right: -450px;
+  }
+  100% {
+    right: 50%;
+  }
+}
+@keyframes baloon_animation {
+  0% {
+    right: 0%;
+  }
+  40% {
+    right: 50%;
+    margin-right: -400px;
+  }
+  50% {
+    right: 50%;
+    margin-right: -200px;
+    top: 50%;
+  }
+  100% {
+    top: -100%;
+    margin-right: -200px;
+    right: 50%;
+  }
+}
+@keyframes go_2019 {
+  0% {
+    top: 50%;
+  }
+  100% {
+    top: -100%;
+  }
+}
+#happy-stroke {
+  animation: happy-dash 1.7s linear normal forwards;
+}
+
+#n-stroke {
+  animation: dash 2s 1.8s linear normal forwards;
+}
+
+#ew-stroke {
+  animation: dash 2s 2.5s linear normal forwards;
+}
+
+#y-stroke {
+  animation: dash 2s 3.3s linear normal forwards;
+}
+
+#ye-stroke {
+  animation: dash 1s 4s linear normal forwards;
+}
+
+#ear-stroke {
+  animation: dash 2s 4.18s linear normal forwards;
+}
+
+#underline-stroke {
+  animation: dash 0.5s 5.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) normal forwards;
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes happy-dash {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  6% {
+    stroke-dashoffset: 976;
+  }
+  6.01% {
+    stroke-dashoffset: 958;
+  }
+  13% {
+    stroke-dashoffset: 936;
+  }
+  13.01% {
+    stroke-dashoffset: 905;
+  }
+  20% {
+    stroke-dashoffset: 896;
+  }
+  20.01% {
+    stroke-dashoffset: 864;
+  }
+  27% {
+    stroke-dashoffset: 840;
+  }
+  27.01% {
+    stroke-dashoffset: 830;
+  }
+  34% {
+    stroke-dashoffset: 808;
+  }
+  34.01% {
+    stroke-dashoffset: 775;
+  }
+  40% {
+    stroke-dashoffset: 764;
+  }
+  40.01% {
+    stroke-dashoffset: 738;
+  }
+  60% {
+    stroke-dashoffset: 688;
+  }
+  60.01% {
+    stroke-dashoffset: 658;
+  }
+  80% {
+    stroke-dashoffset: 610;
+  }
+  80.01% {
+    stroke-dashoffset: 580;
+  }
+  90% {
+    stroke-dashoffset: 555;
+  }
+  90.01% {
+    stroke-dashoffset: 543;
+  }
+  99.99% {
+    stroke-dashoffset: 525;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
